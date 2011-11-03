@@ -1,6 +1,6 @@
 network = $network ? $network : 'SMS'
 
 message $msg_to_send, {
-    :to=>[$destination.split(' ')],
+    :to=>[$destination.split('-')],
     :network => network
   }
