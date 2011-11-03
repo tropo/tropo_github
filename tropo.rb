@@ -1,9 +1,9 @@
 network = $network ? $network : 'SMS'
 
-#$destination.split(',').each do |to|
- # log "====> #{to}"
+$destination.split(',').each do |to|
+  log "(debug) ===> [ $msg_to_send --> to #{to} ]"
   message $msg_to_send, {
-    :to=>[$destination.split(',').to_s],
+    :to=>to,
     :network => network
   }
-#end
+end
