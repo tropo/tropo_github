@@ -1,4 +1,6 @@
 message $msg_to_send, {
-    :to=>$destination,
-    :callerID=>$from_number
+    :to=>$destination
+    if $from_number
+      ,:callerID=>$from_number
+    end
   }
